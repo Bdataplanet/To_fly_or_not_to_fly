@@ -1,1 +1,6 @@
-This is a test.
+# Communication protocol
+    - Slack direct messages for team members
+    - Meet time on an as-needed basis
+    - Emergency contact
+         - whom: all team members.
+         - How: Slack direct messages.
