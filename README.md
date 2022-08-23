@@ -11,7 +11,7 @@ Flight cancellations don't just impact travelers, but can mean loss in profits f
 We wanted to make this a reality, so we decided to take a look at flights that have been cancelled due to weather in order to determine the likelihood of a flight being cancelled based on specific combinations of weather events. We also hope to look at other features such as the location of an airport, the flight's airline, and even possibily time of departure.
 
 Questions:
-How does weather impact flight cancellations? Are there certain weather events (snow, raing, wind, etc.) that impact the decision to cancel at a higher rate than other weather events?
+How does weather impact flight cancellations? Are there certain weather events (snow, rain, wind, etc.) that impact the decision to cancel at a higher rate than other weather events?
 Are certain airlines more prone to cancelling flights based on weather?
 
 
@@ -64,12 +64,12 @@ Possibilities for improvement...
 Possible uses...
 
 ## Tools used 
-Python (with dependencies scikit-learn, urllib, pandas, ...)
-PostgreSQL
-Jupyter Notebook
-Kaggle, Kaggle API
-D3
-Leaflet
-Github
-Google Slides
+<br>Python (with dependencies scikit-learn, urllib, pandas, ...)</br>
+<br>PostgreSQL</br>
+<br>Jupyter Notebook</br>
+<br>Kaggle, Kaggle API</br>
+<br>D3</br>
+<br>Leaflet</br>
+<br>Github</br>
+<br>Google Slides</br>
 
