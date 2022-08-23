@@ -6,13 +6,26 @@ This README will serve as a project/presentation outline as we work, and as a gu
 ## The Story
 Delayed or cancelled flights can ruin business trips, vacations, family events, and so much more. But what if you could predict whether or not a flight will be cancelled before you even arrive at the airport? You could change your plans, find another way to get to your destination, call in on Zoom. The possibilities are endless.
 
-Flight cancellations don't just impact travelers, but can mean loss in profts for airlines. Having an accurate estimation of fight cancellations is critical for airlines in order to increase both customer satisfaction and overall profit.
+Flight cancellations don't just impact travelers, but can mean loss in profits for airlines. Having an accurate estimation of fight cancellations is critical for airlines in order to increase both customer satisfaction and overall profit.
 
-We wanted to make this a reality, so we decided to take a look at flights that have been cancelled due to weather in order to determine the likelihood of a flight being cancelled based on specific combinations of weather events.
+We wanted to make this a reality, so we decided to take a look at flights that have been cancelled due to weather in order to determine the likelihood of a flight being cancelled based on specific combinations of weather events. We also hope to look at other features such as the location of an airport, the flight's airline, and even possibily time of departure.
 
 Questions:
-How does weather impact
-Are certain arilines more prone to cancelling
+How does weather impact flight cancellations? Are there certain weather events (snow, raing, wind, etc.) that impact the decision to cancel at a higher rate than other weather events?
+Are certain airlines more prone to cancelling flights based on weather?
+
+
+## The team
+We are a team of four, from various backgrounds, coming together to answer this question with our knowledge of databases, data cleaning, machine learning, and analysis.
+
+### Communication
+We are using Slack as our primary means of communication, and have created a channel for us to collaborate. We communicate our progress, ask each other questions, and share our thoughts as we move through each piece of the project.
+
+We also have a Google Doc where we can collaborate and take notes from our meetings. This is where we are placing action items. 
+
+We are meeting regularly on Monday and Wednesday from 7-9 PM, and as-needed at other times.
+
+In case of emergency, we will reach out to each other on Slack. We have also shared our contact information in the shared Google Doc.
 
 ## The data
 ### Where did the data come from?
