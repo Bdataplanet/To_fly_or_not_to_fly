@@ -1,5 +1,7 @@
-# Custom file/folders to ignore
+# Custom files/folders to ignore
 API_keys/
+*.csv
+*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
