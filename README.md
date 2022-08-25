@@ -1,4 +1,4 @@
-# To_fly_or_not_to_fly
+# To Fly or Not to Fly
 
 ## Purpose
 This README will serve as a project/presentation outline as we work, and as a guide once the project is complete.
