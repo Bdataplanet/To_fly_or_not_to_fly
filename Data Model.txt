@@ -15,10 +15,6 @@ List of airports in the United States of America, with latitude and longitude. U
 Delay time:
 A flight is on-time if the departure delay is within 15-min of the scheduled departure time (CRSDepTime). A flight is delayed if the departure delay is more than 15-min late from the scheduled departure time (CRSDepTime). 
 
-
-
-
-
 Data Model and Analysis:
 
 1.	Which model did you choose and why?
