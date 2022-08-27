@@ -15,8 +15,8 @@ The diagram can be reproduced by entering the following into [its app](https://a
 ```
 airports as ap
 ----
-id serial AUTOINCREMENT PK
-icao_code char(4) UNIQUE
+id serial PK
+icao_code varchar(4) UNIQUE
 iata_code char(3) UNIQUE
 name text
 city text
@@ -37,8 +37,8 @@ flights_and_weather as faw
 ----
 carrier_code char(3)
 flight_number integer
-origin_airport FK >- ap.iata_code
-destination_airport FK >- ap.iata_code
+origin_airport char(3) FK >- ap.iata_code
+destination_airport char(3) FK >- ap.iata_code
 date date
 scheduled_elapsed_time integer
 tail_number text NULLABLE
@@ -67,3 +67,5 @@ HourlyStationPressure_y numeric NULLABLE
 HourlyVisibility_y numeric NULLABLE
 HourlyWindSpeed_y numeric NULLABLE
 ```
+
+Although not stated in the schema above, no columns in the `airports` table have a `NOT NULL` constraint (*i.e.*, they are all `NULLABLE`).

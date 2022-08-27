@@ -1,5 +1,7 @@
 # Custom files/folders to ignore
 API_keys/
+resources/data/GlobalAirportDatabase.txt
+resources/data/readme.txt
 *.csv
 *.zip
 
