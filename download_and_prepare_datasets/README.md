@@ -35,13 +35,13 @@ lon_decimal numeric
 
 flights_and_weather as faw
 ----
-carrier_code char(3)
+carrier_code char(2)
 flight_number integer
 origin_airport char(3) FK >- ap.iata_code
 destination_airport char(3) FK >- ap.iata_code
-date date
+filght_date date
 scheduled_elapsed_time integer
-tail_number text NULLABLE
+tail_number varchar(6) NULLABLE
 departure_delay integer
 arrival_delay integer
 delay_carrier integer
@@ -50,10 +50,10 @@ delay_national_aviation_system integer
 delay_security integer
 delay_late_aircarft_arrival integer
 cancelled_code boolean
-scheduled_departure_dt datetime
-scheduled_arrival_dt datetime
-actual_departure_dt datetime NULLABLE
-actual_arrival_dt datetime NULLABLE
+scheduled_departure_dt timestamp
+scheduled_arrival_dt timestamp
+actual_departure_dt timestamp NULLABLE
+actual_arrival_dt timestamp NULLABLE
 STATION_x numeric NULLABLE
 HourlyDryBulbTemperature_x numeric NULLABLE
 HourlyPrecipitation_x numeric NULLABLE
