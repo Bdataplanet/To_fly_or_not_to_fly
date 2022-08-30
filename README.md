@@ -38,11 +38,11 @@ The discovery proces included researching Weather APIs, historical weather datas
 ### What will we do with the data?
 The primary data was downloaded using the Kaggle API, and code written in Jupyter Notebook. 
 
-<img src="Images/dl_primary_dataset.png">
+<img src="resources/images/dl_primary_dataset.png">
 
-The seconday dataset was downloaded by importing urlretrieve from urllib.request in Jupyter Notebook.
+The seconday dataset was downloaded with the following code in Jupyter Notebook.
 
-<img src="Images/dl_secondary_dataset.png">
+<img src="resources/images/dl_secondary_dataset.png">
 
 Once downloaded, the data was cleaned and processed using Python in Jupyter Notebook.
 
