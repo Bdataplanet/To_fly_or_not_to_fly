@@ -2,7 +2,7 @@
 
 There are two [Jupyter Notebook](https://jupyter.org/) files contained in this folder:
 - `01_get_data.ipynb` is used to download the datasets
-- `02_process_data.ipynb` is used to preprocess the data for eventual upload to a PostgreSQL database.
+- `02_prepare_and_store_data.ipynb` is used to preprocess the data and upload it to a PostgreSQL database.
 
 The data will be uploaded in two tables: `flights_and_weather` and `airports`, which will be joined on their [International Air Transport Association (IATA)](https://www.iata.org/) codes.
 
@@ -69,3 +69,7 @@ HourlyWindSpeed_y numeric NULLABLE
 ```
 
 Although not stated in the schema above, no columns in the `airports` table have a `NOT NULL` constraint (*i.e.*, they are all `NULLABLE`).
+
+## Update
+
+Although the `airports` data is extensive, it is not comprehensive, and there are airports in the `flights_and_weather` data that are not present in the `airports` data. Because of this, the `FOREIGN KEY CONSTRAINT` on the `flights_and_weather` table had to be removed. As a result, any `OUTER JOIN`s performed on that relation may result in `NULL` values in airports' coordinate data.
