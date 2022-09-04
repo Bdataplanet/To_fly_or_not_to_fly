@@ -8,3 +8,6 @@ The team member in the X role will focus on the team's dashboard. Create a story
    - Storyboard on Google Slide(s) 
    - Description of the tool(s) that will be used to create final dashboard 
    - Description of interactive element(s) For example, A map with multiple layers. Or an interactive chart that can be filtered or has adjustable zoom. 
+   
+
+ https://docs.google.com/presentation/d/1xCQfsnr2x7BBR7qA2yhjTOwE3UHtH0NpNxat9xTnOas/edit#slide=id.p
