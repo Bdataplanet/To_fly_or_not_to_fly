@@ -3,6 +3,8 @@
 ## Purpose
 This README will serve as a project/presentation outline as we work, and as a guide once the project is complete.
 
+The google slide presentation version of this document can be viewed <a href="https://docs.google.com/presentation/d/1xCQfsnr2x7BBR7qA2yhjTOwE3UHtH0NpNxat9xTnOas/edit#slide=id.g1538de35a1e_0_25">here</a>.
+
 ## The Story
 Delayed or cancelled flights can ruin business trips, vacations, family events, and so much more. But what if you could predict whether or not a flight will be cancelled before you even arrive at the airport? You could change your plans, find another way to get to your destination, call in on Zoom. The possibilities are endless.
 
