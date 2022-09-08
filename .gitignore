@@ -1,4 +1,5 @@
 # Custom files/folders to ignore
+.DS_Store
 API_keys/
 resources/data/GlobalAirportDatabase.txt
 resources/data/readme.txt
