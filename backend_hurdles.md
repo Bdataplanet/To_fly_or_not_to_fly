@@ -14,13 +14,13 @@ Downloading the data from their sources presented only had a handfull of challen
 
 ##### General Text Conversion
 
-The airport data required a lot of general text conversion, including: splitting, joining, regular expression substitution, and null-value conversion (to python `None` values).
+The airport data required a lot of general text conversion, including: splitting, joining, regular expression substitution, and null-value conversion (to Python `None` values).
 
 ##### Column Definitions
 
 In addition, there were issues related to column definitions that had to be resolved before the SQL database would accept the data.
 
-**Problem:** NumPy `NaN` values are technically `float`s, which causes Pandas to coerce otherwise-`integer` columns into `float` columns if `NaN` values are present.
+**Problem:** NumPy `NaN` values are technically `float`s, which, if present, cause Pandas to coerce otherwise-`integer` columns into `float` columns.
 
 **Solution:** convert such columns to Pandas `Int64Dtype`, whose `<NA>` values still count as `integer`s.
 
@@ -41,13 +41,13 @@ PostgreSQL uses only lowercase column names, so the columns in the dataframe had
 
 ##### Redundant Data
 
-The data contained both a `date` column as well as individual `year`, `month`, `day`, and `weekday` columns, all of which can be extracted from `date`, if they are in full agreement.
+The data contained both a `date` column as well as individual `year`, `month`, `day`, and `weekday` columns, all of which can be extracted from `date`, as long as they are in full agreement.
 
-Analysis of the columns' data was in full agreement, and so `year`, `month`, `day`, and `weekday` were dropped.
+Analysis of the columns' data did show full agreement, and so `year`, `month`, `day`, and `weekday` were dropped.
 
 ##### Irrelevant Cancellations
 
-Flights can be cancelled for many reasons. For this project, however, only weather-based cancellations were important. So flights with non-weather-based cancellations were dropped.
+Flights can be cancelled for many reasons. For this project, only weather-based cancellations were important. So flights with non-weather-based cancellations were dropped.
 
 ##### Incorrect Data Types
 
@@ -55,9 +55,9 @@ Once only two types of cancellations remained—"cancelled due to weather" or "n
 
 ##### Foreign Key Constraints
 
-We intended to use the IATA codes in the flights-and-weather data to join to the airports data. However, we discovered that the airports data is not comprehensive, and so we had to remove the `FOREIGN KEY CONSTRAINT` from the PostgreSQL database to allow the flights-and-weather data to upload.
+We intended to use the IATA codes in the flights-and-weather data to join to the corresponding column in the airports data. However, we discovered that the airports data is not comprehensive, and so we had to remove the `FOREIGN KEY CONSTRAINT` from the PostgreSQL database to allow the flights-and-weather data to upload.
 
-This does mean that some data extracted from the database using an (outer) join on these columns will have `NULL` values, but we decided it was to have the data and ignore it than it was to discard it and discover we needed it, later.
+This does mean that some data extracted from the database using an (outer) join on these columns will have `NULL` values, but we decided it was better to have the data and ignore it than it was to discard it and later discover we needed it.
 
 ### Data Upload
 
