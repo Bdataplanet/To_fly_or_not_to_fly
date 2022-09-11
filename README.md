@@ -132,7 +132,9 @@ The trial yielded an accuracy score of approximately 71% with the following conf
 
 ![confusion matrix](./resources/images/mlm_t01_logistic_confusion_matrix.png)
 
-##### Classification Report[^mlm_t1_cr]
+##### Classification Report
+
+(Screenshot [here](./resources/images/mlm_t01_logistic_classification_report.png))
 
 ```
               precision    recall  f1-score   support
@@ -145,39 +147,63 @@ The trial yielded an accuracy score of approximately 71% with the following conf
 weighted avg       0.71      0.71      0.71      6792
 ```
 
-[^mlm_t1_cr]: A screenshot of the classification report can be found [here](./resources/images/mlm_t01_logistic_classification_report.png)
+#### Trial 2: Logistic Regression with Oversampling
 
-### Presentation
+The trial also yielded an accuracy score of approximately 71% with the following confusion matrix and classification report:
 
-The final presentation of our exploration and analysis will include an interactive map created with D3 and Leaflet. This map will show the locations of airports, and we hope to have the size of the marker indicate the frequency of cancellations due to weather. We will also include a Google slide presentation to share our background, process, and results.
-Outputs...
-Analysis...
+##### Confusion Matrix
 
-## Next Steps
+![confusion matrix](./resources/images/mlm_t02_logistic_confusion_matrix.png)
 
-What we do with the information...
-Possibilities for improvement...
-Possible uses...
+##### Classification Report
+
+(Screenshot [here](./resources/images/mlm_t02_logistic_classification_report.png))
+
+```
+              precision    recall  f1-score   support
+
+           0       0.71      0.71      0.71    467352
+           1       0.71      0.72      0.71    467637
+
+    accuracy                           0.71    934989
+   macro avg       0.71      0.71      0.71    934989
+weighted avg       0.71      0.71      0.71    934989
+```
+
+### General Analysis
+
+We looked at various features of interest, in particular proportions of total flights versus proportions of cancellations due to weather by airline. We noticed that certain airlines had higher or lower than expected proportions of cancelled flights. This lead us to be interested in creating a map of cancellations due to weather by origin airport where the marker sizes were based on number of cancellations at that airport.
+
+#### Cancellation Proportions by Airline (Highlights)
+
+| Airline | Flight Proportion | Cancellation Proportion |
+| :-:     | :-:               | :-:                     |
+| AA      | 26%               | 41.8%                   |
+| DL      | 22%               | 7.3%                    |
 
 ## Tools Used 
 
 - Git & GitHub
 - Google Slides
 - Javascript
-  - D3
+  - D3 (Data-Driven Documents)
   - Leaflet
 - Jupyter Notebook
 - PostgreSQL
 - Python
   - csv
   - dataframe_image
+  - datetime
   - getpass
+  - geojson
+    - dump
   - io
     - StringIO
   - kaggle
     - KaggleApi
   - matplotlib
     - pyplot
+  - numpy
   - os
   - pandas
   - re (regular expressions)
