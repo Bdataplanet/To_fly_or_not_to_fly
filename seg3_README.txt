@@ -1,6 +1,10 @@
+# Seg 3 Google Slides
+
+https://docs.google.com/presentation/d/1xCQfsnr2x7BBR7qA2yhjTOwE3UHtH0NpNxat9xTnOas/edit#slide=id.p
+
 ## Description of Triangle Role in part 3 of the project.
 
-Triangle: Create a draft presentation to share with your class.
+Create a draft presentation to share with your class.
 
 ### Slides
 Presentations are drafted in Google Slides.
