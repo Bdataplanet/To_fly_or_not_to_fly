@@ -20,17 +20,6 @@ We wanted to make this a reality, so we decided to take a look at flights that h
 ## The Team
 We are a team of four, from various backgrounds, coming together to answer this question wusing ith our knowledge of databases, data cleaning, machine learning, and analysis.
 
-<s>
-### Communication
-We used Slack as our primary means of communication, and created a channel for us to collaborate. We communicated our progress, asked each other questions, and shared our thoughts as we moved through each segment of the project.
-
-We also created a Google Doc where we could collaborate and take notes and record action items from our meetings. 
-
-We met regularly on Monday and Wednesday from 7–9 PM, and as-needed at other times.
-
-In case of emergency, we would reach out to each other on Slack. We also shared contact information in the Google Doc.
-</s>
-
 ## The Data
 
 ### Where did the data come from?
@@ -126,7 +115,7 @@ We also explored whether certain airlines cancel flights at higher rates than ot
 
 #### Trial 1: Logistic Regression with Undersampling
 
-The trial yielded an accuracy score of approximately 71% with the following confusion matrix and classification report:
+The trial yielded an accuracy score of approximately <span style="background-color: yellow">71%</span> with the following confusion matrix and classification report:
 
 ##### Confusion Matrix
 
@@ -149,7 +138,7 @@ weighted avg       0.71      0.71      0.71      6792
 
 #### Trial 2: Logistic Regression with Oversampling
 
-The trial also yielded an accuracy score of approximately 71% with the following confusion matrix and classification report:
+The trial also yielded an accuracy score of approximately <span style="background-color: yellow">71%</span> with the following confusion matrix and classification report:
 
 ##### Confusion Matrix
 
@@ -172,7 +161,7 @@ weighted avg       0.71      0.71      0.71    934989
 
 #### Trial 3: Random Forest with Undersampling
 
-The trial yielded an accuracy score of approximately 87% with the following confusion matrix and classification report:
+The trial yielded an accuracy score of approximately <span style="background-color: yellow">87%</span> with the following confusion matrix and classification report:
 
 ##### Confusion Matrix
 
@@ -195,7 +184,7 @@ weighted avg       0.87      0.87      0.87      6792
 
 #### Trial 4: Random Forest with Oversampling
 
-The trial yielded an accuracy score of approximately 99% with the following confusion matrix and classification report:
+The trial yielded an accuracy score of approximately <span style="background-color: lightgreen">99%</span> with the following confusion matrix and classification report:
 
 ##### Confusion Matrix
 
