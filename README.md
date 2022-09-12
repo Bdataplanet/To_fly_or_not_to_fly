@@ -170,6 +170,52 @@ The trial also yielded an accuracy score of approximately 71% with the following
 weighted avg       0.71      0.71      0.71    934989
 ```
 
+#### Trial 3: Random Forest with Undersampling
+
+The trial yielded an accuracy score of approximately 87% with the following confusion matrix and classification report:
+
+##### Confusion Matrix
+
+![confusion matrix](./resources/images/mlm_t03_random_forest_u_confusion_matrix.png)
+
+##### Classification Report
+
+(Screenshot [here](./resources/images/mlm_t03_random_forest_u_classification_report.png))
+
+```
+              precision    recall  f1-score   support
+
+           0       0.85      0.90      0.88      3371
+           1       0.90      0.85      0.87      3421
+
+    accuracy                           0.87      6792
+   macro avg       0.87      0.87      0.87      6792
+weighted avg       0.87      0.87      0.87      6792
+```
+
+#### Trial 4: Random Forest with Oversampling
+
+The trial yielded an accuracy score of approximately 99% with the following confusion matrix and classification report:
+
+##### Confusion Matrix
+
+![confusion matrix](./resources/images/mlm_t04_random_forest_o_confusion_matrix.png)
+
+##### Classification Report
+
+(Screenshot [here](./resources/images/mlm_t04_random_forest_o_classification_report.png))
+
+```
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99    467348
+           1       1.00      0.98      0.99    467641
+
+    accuracy                           0.99    934989
+   macro avg       0.99      0.99      0.99    934989
+weighted avg       0.99      0.99      0.99    934989
+```
+
 ### General Analysis
 
 We looked at various features of interest, in particular proportions of total flights versus proportions of cancellations due to weather by airline. We noticed that certain airlines had higher or lower than expected proportions of cancelled flights. This lead us to be interested in creating a map of cancellations due to weather by origin airport where the marker sizes were based on number of cancellations at that airport.
@@ -195,14 +241,10 @@ We looked at various features of interest, in particular proportions of total fl
   - dataframe_image
   - datetime
   - getpass
-  - geojson
-    - dump
-  - io
-    - StringIO
-  - kaggle
-    - KaggleApi
-  - matplotlib
-    - pyplot
+  - geojson.dump
+  - io.StringIO
+  - kaggle.KaggleApi
+  - matplotlib.pyplot
   - numpy
   - os
   - pandas
@@ -210,6 +252,7 @@ We looked at various features of interest, in particular proportions of total fl
   - requests
   - sklearn
     - compose.ColumnTransformer
+    - ensemble.RandomForestClassifier
     - linear_model.LogisticRegression
     - metrics
       - accuracy_score
