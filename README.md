@@ -259,17 +259,19 @@ weighted avg       0.99      0.99      0.99    470890
 
 We looked at various features of interest, in particular proportions of total flights versus proportions of cancellations due to weather by airline. We noticed that certain airlines had higher- or lower-than-expected proportions of cancelled flights. This lead us to be interested in creating a map of cancellations due to weather by origin airport where the marker sizes were based on number of cancellations at that airport.
 
+#### Charts and Graphs
+
+|              | Flights | Cancellations |
+| --:          | :-:     | :-:           |
+| **Absolute** | ![absolute flights per airline](./resources/images/flights_per_airline.png) | ![absolute cancellations per airline](./resources/images/cancellations_per_airline.png) |
+| **Relative** | ![relative flights per airline](./resources/images/flight_percent_per_airline.png) | ![relative cancellations per airline](./resources/images/cancelled_flight_percent_per_airline.png) |
+
 #### Highlights
 
 | Airline | Flight Proportion | Cancellation Proportion |
 | :-:     | :-:               | :-:                     |
 | AA      | 26%               | 41.8%                   |
 | DL      | 22%               | 7.3%                    |
-
-|              | Flights | Cancellations |
-| --:          | :-:     | :-:           |
-| **Absolute** | ![absolute flights per airline](./resources/images/flights_per_airline.png) | ![absolute cancellations per airline](./resources/images/cancellations_per_airline.png) |
-| **Relative** | ![relative flights per airline](./resources/images/flight_percent_per_airline.png) | ![relative cancellations per airline](./resources/images/cancelled_flight_percent_per_airline.png) |
 
 ## Tools Used 
 
