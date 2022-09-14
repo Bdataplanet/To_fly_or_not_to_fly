@@ -101,11 +101,37 @@ This does mean that some data extracted from the database using an (outer) join 
 
 ### Choosing the Machine Learning Model
 
+#### Initial Choice
+
 We implemented a machine learning model in Python using Scikit-learn, a Python machine-learning library.
 
 We used supervised machine learning to perform tasks such as learning from data patterns and making predictions. Supervised Learning helps to predict—based on airport location and weather conditions—whether a flight will be delayed or not.
 
 The two main uses of supervised learning are regression and classification. In the first part of the project, we used logistic regression to classify our results. Logistic regression was chosen to model flight delay for multiple reasons: first, the results of logistic regression are easily interpretable, since it is a binary classifier; second, it has a built-in "confidence" measure, since the magnitudes of the weights indicate how strongly the model believes flights are to be cancelled.
+
+#### Change of Model Choice
+
+For later trials, we instead chose to implement a random forest mode.
+
+Logistic regression attempts to predict outcomes based on a set of independent variables, but if we include the wrong independent variables, the model will have little-to-no predictive value. We also had to rethink the question: is there any other factor that may impact the model.
+
+We switched to a random forest model to improve our prediction result. This is an ensemble technique which can be used both for regression and for classification tasks. It creates multiple decision tress using a technique called bagging, which involves training all the decision trees on different data samples. The final prediction is made by combining the results of all the decision trees rather than just relying on one of them.
+
+The random forest model showed an improvement in the accuracy score from 72% to 87%, and eventually to 99%!
+
+After building and training the model, predictions were made using the predict method. We used `ConfusionMatrix` to check the results.
+
+#### Overfitting Concerns
+
+We do have some concern about whether the random forest model might be overfit. One advantage to a random forest model is that it can rank which features it considered most important (and by how much). This could allow us to examine where the model focused its attention and to remove features if we decide that the model is giving them too much weight.
+
+Unfortunately, however, our implementation involved a combination of `ColumnTransformer` and `OneHotEncoder` which caused a change in the number of columns without maintaining a description of those new columns headers. Thus, learning that, for example, the model considers "column 11" to be the most important does not allow us to make human judgments about whether or not that is an inappropriate assessment because we no longer know what column 11 represents.
+
+To avoid this, we could do the one-hot encoding separately—instead of as part of the `ColumnTransformer`—so as to keep track of which column is which.
+
+Unfortunately, time constraints made this infeasible, as a single training session for one of the random forest models could take several hours to complete.
+
+### Additional Analysis
 
 We also explored whether certain airlines cancel flights at higher rates than others.
 
@@ -205,16 +231,45 @@ The trial yielded an accuracy score of approximately <span style="background-col
 weighted avg       0.99      0.99      0.99    934989
 ```
 
+#### Trial 5: Random Forest (raw—no sampling)
+
+The trial yielded an accuracy score of approximately <span style="background-color: lightgreen">99%</span> with the following confusion matrix and classification report:
+
+##### Confusion Matrix
+
+<!-- This image is a different size from the others, and so has to be coded with HTML instead of markdown -->
+<img src="./resources/images/mlm_t05_random_forest_r_confusion_matrix.png" width=342 height=113 />
+
+##### Classification Report
+
+(Screenshot [here](./resources/images/mlm_t05_random_forest_r_classification_report.png))
+
+```
+              precision    recall  f1-score   support
+
+       False       0.99      1.00      1.00    467494
+        True       0.75      0.23      0.35      3396
+
+    accuracy                           0.99    470890
+   macro avg       0.87      0.61      0.67    470890
+weighted avg       0.99      0.99      0.99    470890
+```
+
 ### General Analysis
 
-We looked at various features of interest, in particular proportions of total flights versus proportions of cancellations due to weather by airline. We noticed that certain airlines had higher or lower than expected proportions of cancelled flights. This lead us to be interested in creating a map of cancellations due to weather by origin airport where the marker sizes were based on number of cancellations at that airport.
+We looked at various features of interest, in particular proportions of total flights versus proportions of cancellations due to weather by airline. We noticed that certain airlines had higher- or lower-than-expected proportions of cancelled flights. This lead us to be interested in creating a map of cancellations due to weather by origin airport where the marker sizes were based on number of cancellations at that airport.
 
-#### Cancellation Proportions by Airline (Highlights)
+#### Highlights
 
 | Airline | Flight Proportion | Cancellation Proportion |
 | :-:     | :-:               | :-:                     |
 | AA      | 26%               | 41.8%                   |
 | DL      | 22%               | 7.3%                    |
+
+|              | Flights | Cancellations |
+| --:          | :-:     | :-:           |
+| **Absolute** | ![absolute flights per airline](./resources/images/flights_per_airline.png) | ![absolute cancellations per airline](./resources/images/cancellations_per_airline.png) |
+| **Relative** | ![relative flights per airline](./resources/images/flight_percent_per_airline.png) | ![relative cancellations per airline](./resources/images/cancelled_flight_percent_per_airline.png) |
 
 ## Tools Used 
 
