@@ -18,7 +18,7 @@ We wanted to make this a reality, so we decided to take a look at flights that h
 - Are certain airlines more prone than others to cancelling flights based on weather?
 
 ## The Team
-We are a team of four, from various backgrounds, coming together to answer this question wusing ith our knowledge of databases, data cleaning, machine learning, and analysis.
+We are a team of four, from various backgrounds, coming together to answer this question using ith our knowledge of databases, data cleaning, machine learning, and analysis.
 
 ## The Data
 
